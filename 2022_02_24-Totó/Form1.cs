@@ -33,6 +33,27 @@ namespace _2022_02_24_Totó
                 checkBox1.Checked = true;
             }
             checkBox1.Text = $"Nem megfelelő a karakterek száma ({textBox1.Text.Length})";
+
+            string hibásak = "";
+            foreach (var ch in textBox1.Text)
+            {
+                if (ch !='1' && ch!='2' && ch!='X')
+                {
+                    hibásak += ch + ";";
+                }
+            }
+            checkBox2.Text = $"Helytelen karaktere az eredményekben ({hibásak})";
+
+            if (hibásak.Length==0)
+            {
+                checkBox2.Checked = false;
+            }
+            else
+            {
+                checkBox2.Checked = true;
+            }
+
+
         }
     }
 }
