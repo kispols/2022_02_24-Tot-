@@ -21,5 +21,18 @@ namespace _2022_02_24_Totó
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length == 14)
+            {
+                checkBox1.Checked = false  ;
+            }
+            else
+            {
+                checkBox1.Checked = true;
+            }
+            checkBox1.Text = $"Nem megfelelő a karakterek száma ({textBox1.Text.Length})";
+        }
     }
 }
